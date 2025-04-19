@@ -1,0 +1,16 @@
+interface Animal {
+ void makeSound();
+}
+ interface Pet {
+  void showAffection();
+}
+ class Dog implements Animal, Pet {
+ @Override
+  public void makeSound() {
+   System.out.println(The dog barks: Woof! Woof!);
+ }
+@Override
+  public void showAffection() {
+   System.out.println(The dog wags its tail!);
+ }
+}
