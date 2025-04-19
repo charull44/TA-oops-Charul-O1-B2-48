@@ -1,0 +1,23 @@
+import java.io.*;
+public class Main8 {
+    public static void main(String[] args) {
+        String filename = "output.txt";
+        
+        // Writing to file
+        try (FileWriter writer = new FileWriter(filename)) {
+            writer.write("Hello, File Handling in Java!");
+            System.out.println("Data written to file.");
+        } catch (IOException e) {
+            System.out.println("Error writing: " + e.getMessage());
+        }
+
+        // Reading from file
+        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+            String line;
+            while ((line = reader.readLine()) != null)
+                System.out.println("Read: " + line);
+        } catch (IOException e) {
+            System.out.println("Error reading: " + e.getMessage());
+        }
+    }
+}
