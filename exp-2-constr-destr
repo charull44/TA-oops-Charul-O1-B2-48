@@ -1,0 +1,28 @@
+class Car {
+    String model;
+    int year;
+ // Constructor Overloading
+    Car() {
+        model = "Unknown";
+        year = 0;
+    }
+    Car(String m, int y) {
+        model = m;
+        year = y;
+    }
+    void display() {
+        System.out.println("Model: " + model + ", Year: " + year);
+    }
+    // Finalize acts like a destructor (not reliable for use)
+    protected void finalize() {
+        System.out.println("Car object is destroyed.");
+    }
+}
+public class Main2 {
+    public static void main(String[] args) {
+        Car c1 = new Car();
+        Car c2 = new Car("Honda", 2022);
+        c1.display();
+        c2.display();
+    }
+}
