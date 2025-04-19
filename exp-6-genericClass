@@ -1,0 +1,29 @@
+class Box&lt;T&gt; {
+ private T value; // Generic type variable
+  public void setValue(T value) {
+   this.value = value;
+ }
+public T getValue() {
+  return value;
+ }
+}
+ public class GenericClassExample {
+   public static void main(String[] args) {
+
+     Box&lt;Integer&gt; intBox = new Box&lt;&gt;();
+      intBox.setValue(10);
+        System.out.println(&quot;Integer Value: &quot; + intBox.getValue());
+
+      Box&lt;String&gt; strBox = new Box&lt;&gt;();
+      strBox.setValue(&quot;Generics in Java&quot;);
+        System.out.println(&quot;String Value: &quot; + strBox.getValue());
+
+     Box&lt;Double&gt; doubleBox = new Box&lt;&gt;();
+       doubleBox.setValue(99.9);
+          System.out.println(&quot;Double Value: &quot; + doubleBox.getValue());
+        }
+    }
+Output:
+Integer Value: 10
+String Value: Generics in Java
+Double Value: 99.9
